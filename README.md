@@ -19,7 +19,7 @@ $ yum install omping
 #### Source code
 For stable version, use https://github.com/jfriesse/omping/releases/download/0.0.4/omping-0.0.4.tar.gz. For newest git, use
 ```
-$ git clone git://git.fedorahosted.org/git/omping.git
+$ git clone git://github.com/jfriesse/omping.git
 $ cd omping
 $ make
 ```
