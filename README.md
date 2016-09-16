@@ -1,3 +1,5 @@
+![Open Multicast Ping banner](extras/img/omping-banner.png)
+
 ### Overview
 Omping (Open Multicast Ping) is tool to test IP multicast functionality primarily in local network.
 
