@@ -87,9 +87,9 @@ util.o: util.c util.h logging.h
 
 install: $(PROGRAM_NAME)
 	test -z "$(DESTDIR)/$(BINDIR)" || mkdir -p "$(DESTDIR)/$(BINDIR)"
-	$(INSTALL_PROGRAM) -c $< $(DESTDIR)/$(BINDIR)
+	$(INSTALL_PROGRAM) -c -p $< $(DESTDIR)/$(BINDIR)
 	test -z "$(DESTDIR)/$(MANDIR)/man8" || mkdir -p "$(DESTDIR)/$(MANDIR)/man8"
-	$(INSTALL_PROGRAM) -c -m 0644 $<.8 $(DESTDIR)/$(MANDIR)/man8
+	$(INSTALL_PROGRAM) -c -p -m 0644 $<.8 $(DESTDIR)/$(MANDIR)/man8
 
 uninstall:
 	rm -f $(DESTDIR)/$(BINDIR)/$(PROGRAM_NAME)
