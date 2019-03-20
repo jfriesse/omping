@@ -1,6 +1,6 @@
 Name: omping
 Version: 0.0.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Utility to test IP multicast functionality
 Group: Applications/Internet
 License: ISC
@@ -16,7 +16,8 @@ primarily in local network.
 %setup -q
 
 %build
-make %{?_smp_mflags} CFLAGS="%{optflags}"
+%set_build_flags
+make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
@@ -27,11 +28,15 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING
+%doc AUTHORS
+%license COPYING
 %{_bindir}/%{name}
 %{_mandir}/man8/*
 
 %changelog
+* Wed Mar 20 2019 Jan Friesse <jfriesse@redhat.com> - 0.0.4-2
+- Use license and set_build_flags macro
+
 * Mon Jun 22 2011 Jan Friesse <jfriesse@redhat.com> - 0.0.4-1
 - Update to version 0.0.4
 
