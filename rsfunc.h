@@ -21,6 +21,8 @@
 #ifndef _RSFUNC_H_
 #define _RSFUNC_H_
 
+#include <sys/time.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
