@@ -138,7 +138,7 @@ cli_parse(int argc, char * const argv[], struct omping_instance *instance)
 			break;
 		case 'c':
 			numd = strtod(optarg, &ep);
-			if (numd < 1 || *ep != '\0' || numd >= ((uint64_t)~0)) {
+			if (numd < 1 || *ep != '\0' || (uint64_t)numd >= ((uint64_t)~0)) {
 				warnx("illegal number, -c argument -- %s", optarg);
 				goto error_usage_exit;
 			}
